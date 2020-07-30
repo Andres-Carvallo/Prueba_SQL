@@ -8,7 +8,7 @@ RETURN => CREATE DATABASE
 \c prueba;
 RETURN => You are now connected to database "prueba" as user "andres".
 
-* CREATE TABLE cliente(
+CREATE TABLE cliente(
         id SERIAL PRIMARY KEY,
         nombre VARCHAR,
         rut VARCHAR(15),
@@ -19,7 +19,7 @@ SELECT * FROM cliente; =>  id | nombre | rut | direccion
                           ----+--------+-----+-----------
                           (0 rows)
 
-* CREATE TABLE factura(
+CREATE TABLE factura(
         id SERIAL PRIMARY KEY,
         numero_factura INT,
         fecha DATE,
@@ -31,7 +31,7 @@ SELECT * FROM factura; =>   id | numero_factura | fecha | cliente_id | sub_total
                            ----+----------------+-------+------------+-----------
                            (0 rows)
 
-* CREATE TABLE categoria(
+CREATE TABLE categoria(
         id SERIAL PRIMARY KEY,
         nombre VARCHAR,
         descripcion VARCHAR
@@ -41,7 +41,7 @@ SELECT * FROM categoria; =>  id | nombre | descripcion
                             ----+--------+-------------
                             (0 rows)
 
-* CREATE TABLE producto(
+CREATE TABLE producto(
         id SERIAL PRIMARY KEY,
         nombre VARCHAR,
         precio_unitario INT,
